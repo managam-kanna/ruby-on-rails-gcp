@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  username: "postgres"
+  password: "postgresXIITKJ94"
+  database: "cat_list_production"
+  host:   "/cloudsql/ruby-on-rails-gcp:us-central1:rails-cloudsql-instance"
