@@ -1,0 +1,21 @@
+steps:
+    # Build the container image
+    - name: 'gcr.io/cloud-builders/docker'
+      args: ['build', '-t', 'gcr.io/ruby-on-rails-gcp/ruby-on-rails-gcp:$COMMIT_SHA', '.']
+    # Push the image to Container Registry
+    - name: 'gcr.io/cloud-builders/docker'
+      args: ['push', 'gcr.io/ruby-on-rails-gcp/ruby-on-rails-gcp:$COMMIT_SHA']
+    # Deploy image to Cloud Run
+    - name: 'gcr.io/cloud-builders/gcloud'
+      args:
+      - 'run'
+      - 'deploy'
+      - 'ruby-on-rails-gcp'
+      - '--image'
+      - 'gcr.io/ruby-on-rails-gcp/ruby-on-rails-gcp:$COMMIT_SHA'
+      - '--region'
+      - 'asia-east1'
+      - '--platform'
+      - 'managed'
+    images:
+    - gcr.io/ruby-on-rails-gcp/ruby-on-rails-gcp
