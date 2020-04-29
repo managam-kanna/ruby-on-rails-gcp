@@ -47,5 +47,5 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   # Whitelist one hostname
-  config.hosts << "https://ruby-on-rails-gcp-ldoc4nbcgq-de.a.run.app/"
+  config.hosts << '.run.app'
 end

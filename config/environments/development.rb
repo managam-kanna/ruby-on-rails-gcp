@@ -61,5 +61,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Whitelist one hostname
-  config.hosts << "https://ruby-on-rails-gcp-ldoc4nbcgq-de.a.run.app/"
+  config.hosts << '.run.app'
 end
