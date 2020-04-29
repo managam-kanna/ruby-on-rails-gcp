@@ -1,6 +1,3 @@
-# ruby-on-rails-gcp
-ruby-on-rails-gcp
-=======
 # README
 
 This README would normally document whatever steps are necessary to get the
