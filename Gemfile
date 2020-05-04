@@ -54,3 +54,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "pg", "~> 1.2"
+gem "appengine", "~> 0.5.0"
