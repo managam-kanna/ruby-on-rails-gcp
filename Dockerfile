@@ -1,5 +1,8 @@
 FROM ruby:2.6.3
 
+ENV GEM_HOME="/usr/local/bundle"
+ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
+
 RUN apt-get update && apt-get install -y \
   curl \
   build-essential \
