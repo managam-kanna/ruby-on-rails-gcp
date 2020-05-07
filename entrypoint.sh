@@ -1,7 +1,4 @@
 #!/bin/bash
-unset BUNDLE_PATH
-unset BUNDLE_BIN
-
 set -e
 
 # Remove a potentially pre-existing server.pid for Rails.
