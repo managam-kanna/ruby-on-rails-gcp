@@ -12,7 +12,6 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir /ruby-on-rails-gcp
 WORKDIR /ruby-on-rails-gcp
 
-RUN gem install google-protobuf:3.11.4 --platform=ruby
 RUN gem install bundler:2.1.4
 
 COPY Gemfile /ruby-on-rails-gcp/Gemfile
